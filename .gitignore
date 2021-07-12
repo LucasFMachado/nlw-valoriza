@@ -1,0 +1,9 @@
+node_modules
+
+*.log
+
+.env
+
+# Ignora todas as imagens da pasta, menos o .gitkeep
+# tmp/uploads/*
+# !tmp/uploads/.gitkeep
