@@ -5,13 +5,16 @@ import { v4 as uuid } from 'uuid'
 class User {
   
   @PrimaryColumn()
-  readonly id: String;
+  readonly id: string;
   
   @Column()
-  name: String;
+  name: string;
   
   @Column()
-  email: String;
+  email: string;
+
+  @Column()
+  password: string;
   
   @Column()
   admin: Boolean;
