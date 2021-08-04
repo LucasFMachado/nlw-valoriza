@@ -5,10 +5,9 @@ export function ensureAdmin(
   response: Response,
   next: NextFunction
 ) {
-  // Verifica se o usuário é admin
-  const admin = true;
+  const { user_id, user_admin } = request;
 
-  if (admin) {
+  if (user_admin) {
     return next();
   }
 
