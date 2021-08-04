@@ -1,12 +1,17 @@
 import 'reflect-metadata';
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors'
+import cors from "cors";
 
 import { router } from './routes';
 
 import "./database"
 
 const app = express();
+app.use(cors()); // habilita acesso de todas as origens
+// app.use(cors({
+//   origin: qualquer rota que queira habilitar acesso
+// }));
 
 app.use(express.json());
 
